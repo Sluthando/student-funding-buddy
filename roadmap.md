@@ -3,4 +3,4 @@
 - [x] Build welcome, onboarding, dashboard and discovery
 - [x] Build opportunity details, match explanation and document checklist
 - [x] Build applications, saved, deadlines, profile, notifications and help
-- [ ] Validate build and complete user journey on mobile and desktop
+- [x] Validate build and complete user journey on mobile and desktop
