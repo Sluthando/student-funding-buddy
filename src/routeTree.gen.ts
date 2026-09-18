@@ -10,33 +10,167 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ApplicationsRouteImport } from './routes/applications'
+import { Route as DeadlinesRouteImport } from './routes/deadlines'
+import { Route as DiscoverRouteImport } from './routes/discover'
+import { Route as HelpRouteImport } from './routes/help'
+import { Route as HomeRouteImport } from './routes/home'
+import { Route as NotificationsRouteImport } from './routes/notifications'
+import { Route as OnboardingRouteImport } from './routes/onboarding'
+import { Route as ProfileRouteImport } from './routes/profile'
+import { Route as SavedRouteImport } from './routes/saved'
+import { Route as BursaryBursaryIdRouteImport } from './routes/bursary.$bursaryId'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApplicationsRoute = ApplicationsRouteImport.update({
+  id: '/applications',
+  path: '/applications',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DeadlinesRoute = DeadlinesRouteImport.update({
+  id: '/deadlines',
+  path: '/deadlines',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DiscoverRoute = DiscoverRouteImport.update({
+  id: '/discover',
+  path: '/discover',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HelpRoute = HelpRouteImport.update({
+  id: '/help',
+  path: '/help',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HomeRoute = HomeRouteImport.update({
+  id: '/home',
+  path: '/home',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NotificationsRoute = NotificationsRouteImport.update({
+  id: '/notifications',
+  path: '/notifications',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OnboardingRoute = OnboardingRouteImport.update({
+  id: '/onboarding',
+  path: '/onboarding',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProfileRoute = ProfileRouteImport.update({
+  id: '/profile',
+  path: '/profile',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SavedRoute = SavedRouteImport.update({
+  id: '/saved',
+  path: '/saved',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BursaryBursaryIdRoute = BursaryBursaryIdRouteImport.update({
+  id: '/bursary/$bursaryId',
+  path: '/bursary/$bursaryId',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/applications': typeof ApplicationsRoute
+  '/deadlines': typeof DeadlinesRoute
+  '/discover': typeof DiscoverRoute
+  '/help': typeof HelpRoute
+  '/home': typeof HomeRoute
+  '/notifications': typeof NotificationsRoute
+  '/onboarding': typeof OnboardingRoute
+  '/profile': typeof ProfileRoute
+  '/saved': typeof SavedRoute
+  '/bursary/$bursaryId': typeof BursaryBursaryIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/applications': typeof ApplicationsRoute
+  '/deadlines': typeof DeadlinesRoute
+  '/discover': typeof DiscoverRoute
+  '/help': typeof HelpRoute
+  '/home': typeof HomeRoute
+  '/notifications': typeof NotificationsRoute
+  '/onboarding': typeof OnboardingRoute
+  '/profile': typeof ProfileRoute
+  '/saved': typeof SavedRoute
+  '/bursary/$bursaryId': typeof BursaryBursaryIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/applications': typeof ApplicationsRoute
+  '/deadlines': typeof DeadlinesRoute
+  '/discover': typeof DiscoverRoute
+  '/help': typeof HelpRoute
+  '/home': typeof HomeRoute
+  '/notifications': typeof NotificationsRoute
+  '/onboarding': typeof OnboardingRoute
+  '/profile': typeof ProfileRoute
+  '/saved': typeof SavedRoute
+  '/bursary/$bursaryId': typeof BursaryBursaryIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/applications'
+    | '/deadlines'
+    | '/discover'
+    | '/help'
+    | '/home'
+    | '/notifications'
+    | '/onboarding'
+    | '/profile'
+    | '/saved'
+    | '/bursary/$bursaryId'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/applications'
+    | '/deadlines'
+    | '/discover'
+    | '/help'
+    | '/home'
+    | '/notifications'
+    | '/onboarding'
+    | '/profile'
+    | '/saved'
+    | '/bursary/$bursaryId'
+  id:
+    | '__root__'
+    | '/'
+    | '/applications'
+    | '/deadlines'
+    | '/discover'
+    | '/help'
+    | '/home'
+    | '/notifications'
+    | '/onboarding'
+    | '/profile'
+    | '/saved'
+    | '/bursary/$bursaryId'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ApplicationsRoute: typeof ApplicationsRoute
+  DeadlinesRoute: typeof DeadlinesRoute
+  DiscoverRoute: typeof DiscoverRoute
+  HelpRoute: typeof HelpRoute
+  HomeRoute: typeof HomeRoute
+  NotificationsRoute: typeof NotificationsRoute
+  OnboardingRoute: typeof OnboardingRoute
+  ProfileRoute: typeof ProfileRoute
+  SavedRoute: typeof SavedRoute
+  BursaryBursaryIdRoute: typeof BursaryBursaryIdRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +182,91 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/applications': {
+      id: '/applications'
+      path: '/applications'
+      fullPath: '/applications'
+      preLoaderRoute: typeof ApplicationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/deadlines': {
+      id: '/deadlines'
+      path: '/deadlines'
+      fullPath: '/deadlines'
+      preLoaderRoute: typeof DeadlinesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/discover': {
+      id: '/discover'
+      path: '/discover'
+      fullPath: '/discover'
+      preLoaderRoute: typeof DiscoverRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/help': {
+      id: '/help'
+      path: '/help'
+      fullPath: '/help'
+      preLoaderRoute: typeof HelpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/home': {
+      id: '/home'
+      path: '/home'
+      fullPath: '/home'
+      preLoaderRoute: typeof HomeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/notifications': {
+      id: '/notifications'
+      path: '/notifications'
+      fullPath: '/notifications'
+      preLoaderRoute: typeof NotificationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/onboarding': {
+      id: '/onboarding'
+      path: '/onboarding'
+      fullPath: '/onboarding'
+      preLoaderRoute: typeof OnboardingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/profile': {
+      id: '/profile'
+      path: '/profile'
+      fullPath: '/profile'
+      preLoaderRoute: typeof ProfileRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/saved': {
+      id: '/saved'
+      path: '/saved'
+      fullPath: '/saved'
+      preLoaderRoute: typeof SavedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/bursary/$bursaryId': {
+      id: '/bursary/$bursaryId'
+      path: '/bursary/$bursaryId'
+      fullPath: '/bursary/$bursaryId'
+      preLoaderRoute: typeof BursaryBursaryIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ApplicationsRoute: ApplicationsRoute,
+  DeadlinesRoute: DeadlinesRoute,
+  DiscoverRoute: DiscoverRoute,
+  HelpRoute: HelpRoute,
+  HomeRoute: HomeRoute,
+  NotificationsRoute: NotificationsRoute,
+  OnboardingRoute: OnboardingRoute,
+  ProfileRoute: ProfileRoute,
+  SavedRoute: SavedRoute,
+  BursaryBursaryIdRoute: BursaryBursaryIdRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
