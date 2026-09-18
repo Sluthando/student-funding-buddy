@@ -2,7 +2,7 @@ import { createContext, useContext, useEffect, useState, type ReactNode } from '
 
 export type ApplicationStatus = 'Saved' | 'Preparing' | 'Applied' | 'Awaiting Response' | 'Successful' | 'Unsuccessful'
 export type StudentProfile = { name: string; email: string; province: string; institution: string; studyLevel: string; field: string; year: string; average: string; funding: string }
-type Application = { bursaryId: string; status: ApplicationStatus; submitted?: string }
+type Application = { bursaryId: string; status: ApplicationStatus; submitted?: string | undefined }
 type AppState = {
   onboarded: boolean; profile: StudentProfile; saved: string[]; applications: Application[]; checkedDocs: Record<string, string[]>; reminders: Record<string, string[]>; readNotifications: string[]
   completeOnboarding: (profile: StudentProfile) => void; updateProfile: (profile: StudentProfile) => void; toggleSaved: (id: string) => void; startApplication: (id: string) => void; updateStatus: (id: string, status: ApplicationStatus) => void; toggleDocument: (id: string, doc: string) => void; toggleReminder: (id: string, reminder: string) => void; markNotificationRead: (id: string) => void
