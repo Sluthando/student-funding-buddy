@@ -1,0 +1,2 @@
+import { createFileRoute } from '@tanstack/react-router'; import { NotificationsScreen } from '@/components/screens';
+export const Route=createFileRoute('/notifications')({head:()=>({meta:[{title:'Notifications — BursaryBuddy'},{name:'description',content:'Review deadline and application reminders.'},{property:'og:title',content:'Notifications — BursaryBuddy'},{property:'og:description',content:'Keep up with your education funding journey.'},{property:'og:type',content:'website'},{name:'twitter:card',content:'summary_large_image'}]}),component:NotificationsScreen})

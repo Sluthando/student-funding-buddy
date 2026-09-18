@@ -1,0 +1,2 @@
+import { createFileRoute } from '@tanstack/react-router'; import { ApplicationsScreen } from '@/components/screens';
+export const Route=createFileRoute('/applications')({head:()=>({meta:[{title:'Applications — BursaryBuddy'},{name:'description',content:'Prepare and track your bursary applications.'},{property:'og:title',content:'Applications — BursaryBuddy'},{property:'og:description',content:'Track every funding application in one place.'},{property:'og:type',content:'website'},{name:'twitter:card',content:'summary_large_image'}]}),component:ApplicationsScreen})

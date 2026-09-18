@@ -1,0 +1,2 @@
+import { createFileRoute } from '@tanstack/react-router'; import { DeadlinesScreen } from '@/components/screens';
+export const Route=createFileRoute('/deadlines')({head:()=>({meta:[{title:'Deadline tracker — BursaryBuddy'},{name:'description',content:'Stay ahead of upcoming bursary closing dates.'},{property:'og:title',content:'Deadline tracker — BursaryBuddy'},{property:'og:description',content:'Plan applications and simulate deadline reminders.'},{property:'og:type',content:'website'},{name:'twitter:card',content:'summary_large_image'}]}),component:DeadlinesScreen})

@@ -1,0 +1,2 @@
+import { createFileRoute } from '@tanstack/react-router'; import { HelpScreen } from '@/components/screens';
+export const Route=createFileRoute('/help')({head:()=>({meta:[{title:'Application help — BursaryBuddy'},{name:'description',content:'Practical, safe guidance for bursary applications.'},{property:'og:title',content:'Application help — BursaryBuddy'},{property:'og:description',content:'Prepare documents, motivations, interviews and deadlines.'},{property:'og:type',content:'website'},{name:'twitter:card',content:'summary_large_image'}]}),component:HelpScreen})

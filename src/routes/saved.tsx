@@ -1,0 +1,2 @@
+import { createFileRoute } from '@tanstack/react-router'; import { SavedScreen } from '@/components/screens';
+export const Route=createFileRoute('/saved')({head:()=>({meta:[{title:'Saved opportunities — BursaryBuddy'},{name:'description',content:'Review your shortlisted education funding opportunities.'},{property:'og:title',content:'Saved opportunities — BursaryBuddy'},{property:'og:description',content:'Keep promising funding opportunities together.'},{property:'og:type',content:'website'},{name:'twitter:card',content:'summary_large_image'}]}),component:SavedScreen})
