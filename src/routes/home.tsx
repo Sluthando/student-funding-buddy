@@ -1,0 +1,2 @@
+import { createFileRoute } from '@tanstack/react-router'; import { HomeScreen } from '@/components/screens';
+export const Route=createFileRoute('/home')({head:()=>({meta:[{title:'Dashboard — BursaryBuddy'},{name:'description',content:'Your personalised education funding dashboard.'},{property:'og:title',content:'Dashboard — BursaryBuddy'},{property:'og:description',content:'Discover matches, deadlines and application progress.'},{property:'og:type',content:'website'},{name:'twitter:card',content:'summary_large_image'}]}),component:HomeScreen})

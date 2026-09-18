@@ -1,0 +1,2 @@
+import { createFileRoute } from '@tanstack/react-router'; import { OnboardingScreen } from '@/components/screens';
+export const Route=createFileRoute('/onboarding')({head:()=>({meta:[{title:'Create your profile — BursaryBuddy'},{name:'description',content:'Create a student profile for tailored bursary matches.'},{property:'og:title',content:'Create your profile — BursaryBuddy'},{property:'og:description',content:'Tell us about your education journey.'},{property:'og:type',content:'website'},{name:'twitter:card',content:'summary_large_image'}]}),component:OnboardingScreen})
